@@ -1,0 +1,23 @@
+{
+   "kind":"Service",
+   "apiVersion":"v1",
+   "metadata":{
+      "name":"frontend-qa",
+      "labels":{
+         "app":"guestbook-qa",
+	 "name":"guestbook-qa"
+      }
+   },
+   "spec":{
+      "ports": [
+         {
+           "port":80,
+           "targetPort":3000
+         }
+      ],
+      "selector":{
+         "app":"guestbook-qa"
+      },
+      "type": "LoadBalancer"
+   }
+}
