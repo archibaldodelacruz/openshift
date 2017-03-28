@@ -1,9 +1,0 @@
-set firewall family inet filter OpenShift term {{ term_name }} from source-address {{ ip_address }}
-set firewall family inet filter OpenShift term {{ term_name }} from protocol {{ protocol }}
-set firewall family inet filter OpenShift term {{ term_name }} from port {{ port }}
-set firewall family inet filter OpenShift term {{ term_name }} then accept
-#set firewall family inet filter OpenShift term deny_others from protocol tcp
-#set firewall family inet filter OpenShift term deny_others from port http
-#set firewall family inet filter OpenShift term deny_others from port https
-#set firewall family inet filter OpenShift term deny_others then log
-#set firewall family inet filter OpenShift term deny_others then reject

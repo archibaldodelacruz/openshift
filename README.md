@@ -1,2 +1,4 @@
 # openshift
-open shift YAML files
+* Guestbook app located in /guestbook
+
+* Scripts to automatically push config to vSRX on pod create/delete
