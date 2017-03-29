@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# Author: SAVITHRU M LOKANATH
+# Contact: SAVITHRU AT JUNIPER.NET
+# Copyright (c) 2017 Juniper Networks, Inc. All rights reserved.
+
 import os, sys, json, requests, jinja2
 
 def generateTemplate(ip_address, ip_port, ip_protocol, term_name):
