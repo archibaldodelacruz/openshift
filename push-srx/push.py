@@ -1,6 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# Author: SAVITHRU M LOKANATH
+# Contact: SAVITHRU AT JUNIPER.NET
+# Copyright (c) 2017 Juniper Networks, Inc. All rights reserved.
+
 from ncclient import manager
-import populate
-import time
+import populate, time
 
 def push(host, port, user, password):
     try:
