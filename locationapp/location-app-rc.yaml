@@ -17,6 +17,6 @@ spec:
         image: savvythru/location-app
         env:
           - name: GMAP_API_KEY
-            value: "AIzaSyB8aLdHZfN888FusAYJzMxBYG_01bGZSao"
+            value: "XXXX"
         ports:
         - containerPort: 9090
