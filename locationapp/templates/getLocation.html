@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            footer {
+                position:relative;
+                bottom:0;
+                width:100%;
+                height:60px;
+            }
+        </style>
+        <div align="center">
+		<br><a href="http://www.auplod.com/i-aolpud755f8.html"><img src="http://www.auplod.com/u/aolpud755f8.gif" width="400" height="50" alt="Image" border="0" /></a>
+		<br><br>
+        {{location_accept.js}}
+        {{location_decline.js}}
+        <script type="text/javascript">
+            var ask = window.confirm("Savithru's location app wants to access your location");
+
+            if (ask) {
+                document.write('{{location_accept.html}}');
+                document.write("<h3 style='color:blue;'>CURRENT LOCATION</h3><h5>LATITUDE:  {{lat}}<br>LONGITUDE:  {{lng}}</h5>");
+
+            } else {
+                document.write("<h3 style='color:red;'>Cannot Access Location! Defaulting to Orlando, FL</h3>");
+                document.write('{{location_decline.html}}');
+            }
+        </script>
+        </div>
+    </head>
+    <body>
+        <div align="center">
+            <form method="POST" action="/locate">
+				<br>
+                <h3 style='color:blue;'>GET LOCATION</h3>
+                <p><input type="text" name="address"required value"" placeholder="Enter an address"></p>
+                <p><class="submit"><input type="submit" name="Locate" value="Locate"></p>
+                <br><br>
+            </form>
+            <footer>
+                <p><small>LocationApp by Savithru Lokanath</small>
+                <a href="https://github.com/savithruml?tab=repositories"><small>Click for Source</small></a></p>
+            </footer>
+        </div>
+    </body>
+</html>

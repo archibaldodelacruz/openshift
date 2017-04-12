@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: location-app
+spec:
+  replicas: 1
+  selector:
+    app: location-app
+  template:
+    metadata:
+      name: location-app
+      labels:
+        app: location-app
+    spec:
+      containers:
+      - name: location-app
+        image: savvythru/location-app
+        env:
+          - name: GMAP_API_KEY
+            value: "AIzaSyB8aLdHZfN888FusAYJzMxBYG_01bGZSao"
+        ports:
+        - containerPort: 9090

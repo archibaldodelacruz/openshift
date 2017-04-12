@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: location-app-svc
+spec:
+  selector:
+    app: location-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9090
