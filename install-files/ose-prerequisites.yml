@@ -1,0 +1,43 @@
+---
+- hosts: OSEv3
+  tasks:
+  - name: Install the EPEL repository
+    yum: name="https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm" state=present
+ 
+  - name: Install the following base packages
+    yum: name="{{ item }}" state=present
+    with_items:
+      - wget
+      - git
+      - net-tools
+      - bind-utils
+      - iptables-services
+      - bridge-utils
+      - bash-completion
+ 
+#  - name: upgrade all packages
+#    yum: name=* state=latest
+ 
+  - name: Install ansible and additional packages
+    yum: name="{{ item }}" state=present enablerepo=epel
+    with_items:
+      - ansible
+      - pyOpenSSL
+ 
+  - name: Install Docker
+    yum: name=docker state=present
+ 
+  - name: Enable Docker Service
+    service: name=docker enabled=yes
+ 
+  - name: Start Docker Service
+    service: name=docker state=started
+ 
+#  - name: Install NetworkManager
+#    yum: name=NetworkManager state=present
+#
+#  - name: Enable NetworkManager Service
+#    service: name=NetworkManager enabled=yes
+#
+#  - name: Start NetworkManager Service
+#    service: name=NetworkManager state=started
