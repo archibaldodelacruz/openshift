@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: web-app
+spec:
+  replicas: 3
+  selector:
+    app: web-app
+  template:
+    metadata:
+      name: web-app
+      labels:
+        app: web-app
+    spec:
+      containers:
+      - name: web-app
+        image: savvythru/web-app-dev
+        ports:
+        - containerPort: 80
