@@ -1,17 +1,17 @@
 [contrail-repo]
-10.84.29.38
+10.87.64.149
 
 [contrail-controllers]
-10.84.29.38
+10.87.64.149
 
 [contrail-analyticsdb]
-10.84.29.38
+10.87.64.149
 
 [contrail-analytics]
-10.84.29.38
+10.87.64.149
 
 [contrail-kubernetes]
-10.84.29.38
+10.87.64.149
 
 [contrail-compute]
-10.84.29.39
+10.87.64.150
