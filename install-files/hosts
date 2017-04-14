@@ -1,25 +1,17 @@
-# Enable contrail-repo when required - this will start a contrail apt or yum repo container on specified node
-# This repo will be used by other nodes on installing any packages in the node
-# setting up contrail-cni need this repo enabled
 [contrail-repo]
-10.84.29.38
+10.87.64.149
 
 [contrail-controllers]
-10.84.29.38
+10.87.64.149
 
 [contrail-analyticsdb]
-10.84.29.38
+10.87.64.149
 
 [contrail-analytics]
-10.84.29.38
+10.87.64.149
 
 [contrail-kubernetes]
-10.84.29.38
+10.87.64.149
 
 [contrail-compute]
-10.84.29.39
-##
-# Only enable if you setup with openstack (when cloud_orchestrator is openstack)
-##
-;[openstack-controllers]
-;192.168.0.23
+10.87.64.150
