@@ -10,6 +10,7 @@
       - iptables-services
       - bridge-utils
       - bash-completion
+      - python-pip
 
   - name: Install ansible and additional packages
     yum: name="{{ item }}" state=present enablerepo=epel
